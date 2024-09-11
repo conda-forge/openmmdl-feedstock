@@ -1,5 +1,5 @@
 {% set name = "openmmdl" %}
-{% set version = "0.9.2.1" %}
+{% set version = "0.9.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/wolberlab/OpenMMDL/archive/refs/tags/{{ version }}.zip
-  sha256: 3e4dcf0b7977520ebd77c141d2200a040c3a3a799cdeba4984fe072dcac0599e
+  sha256: 1ceb6fec3c2f1e5d67199db2d5f795a0c2da564b470af21347367c8cdce90282
 
 build:
   noarch: python
