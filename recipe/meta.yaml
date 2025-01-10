@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "openmmdl" %}
 {% set version = "0.9.2.4" %}
 
@@ -12,16 +13,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools >=61.0
     - versioningit
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - numpy
     - plip
     - requests >=2.28.1
@@ -46,6 +47,7 @@ test:
     - openmmdl
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - openmmdl_simulation --help
     - openmmdl_analysis --help
