@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/wolberlab/OpenMMDL/archive/refs/tags/{{ version }}.zip
-  sha256: 044712760141356886ecb20d4043e7bf594055d971972b7d1f3154cf63f02b1c
+  sha256: 358ae978e1c58cb55b9020ae86bf985704fb6e047d7aba6896b3a7f3c4ed0714
 
 build:
   noarch: python
