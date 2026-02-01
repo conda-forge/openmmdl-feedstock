@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "openmmdl" %}
-{% set version = "1.1.1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -43,6 +43,7 @@ requirements:
     - jupyter
     - ambertools
     - numba >=0.59.1
+    - numba >=2.1.0
 
 test:
   imports:
@@ -51,8 +52,7 @@ test:
     - pip
     - python {{ python_min }}
   commands:
-    - openmmdl_simulation --help
-    - openmmdl_analysis --help
+    - openmmdl --help
 
 about:
   home: https://github.com/wolberlab/OpenMMDL
